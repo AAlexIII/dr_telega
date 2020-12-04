@@ -379,7 +379,7 @@ def reaction(call):
         send_m(662587491, f'@{q}\n{who}\nПятое сердце')
     if good[c]['photo']:
         send_ph(who,'foto/'+good[c]['photo'])
-    sm(who, good[c]['text'], good[c]['klav'], mes)
+    sm(who, good[c]['text'], good[c]['klav'])
     bot.answer_callback_query(call.id)
 
 
