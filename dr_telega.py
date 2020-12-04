@@ -365,15 +365,15 @@ def reaction(call):
     mes = call.message
     q = call.from_user.username
     print(f"От: @{q} запрос {c}")
-    if call == '54':
+    if c == '54':
         send_m(662587491, f'@{q}\n{who}\nПервое сердце')
-    elif call == '32':
+    elif c == '32':
         send_m(662587491, f'@{q}\n{who}\nВторое сердце')
-    elif call == '37':
+    elif c == '37':
         send_m(662587491, f'@{q}\n{who}\nТретье сердце')
-    elif call == '66':
+    elif c == '66':
         send_m(662587491, f'@{q}\n{who}\nЧетвертое сердце')
-    elif call == '18':
+    elif c == '18':
         send_m(662587491, f'@{q}\n{who}\nПятое сердце')
     ch(who, good[c]['text'], good[c]['klav'], mes)
     bot.answer_callback_query(call.id)
@@ -384,7 +384,7 @@ def start(message):
     who = message.chat.id
     send_m(662587491, '@' + str(message.chat.username))
     sm(who, """Привет
-Это небольшое и надеемся забавное приключение было сделано в честь Дня Рождения ФИПМ
+Это небольшое и, надеемся, забавное приключение было сделано в честь Дня Рождения ФИПМ
 
 Мы спрятали 5 сердец. Первые, кто найдёт их все, получат призы
 По этому вопросу обращайтесь к @gasadaser""", {'Начать': '1'})
