@@ -377,7 +377,7 @@ def reaction(call):
     elif c == '18':
         send_m(662587491, f'@{q}\n{who}\nПятое сердце')
     if good[c]['photo']:
-        send_ph(who,good[c]['photo'])
+        send_ph(who,'foto/'+good[c]['photo'])
     ch(who, good[c]['text'], good[c]['klav'], mes)
     bot.answer_callback_query(call.id)
 
