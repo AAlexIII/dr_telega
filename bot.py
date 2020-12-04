@@ -77,7 +77,8 @@ def send_d(who, text, t=''):
 
 
 def send_ph(who, photo):
-    bot.send_photo(who, photo)
+    with open(photo, 'rb') as f:
+        bot.send_photo(who, f)
 
 
 def edit(who, txt, button, mes):
