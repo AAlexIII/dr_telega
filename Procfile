@@ -1,0 +1,1 @@
+worker: python dr_telega.py
