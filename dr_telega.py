@@ -365,6 +365,7 @@ def reaction(call):
     who = call.message.chat.id
     mes = call.message
     q = call.from_user.username
+    bot.delete_message(who,mes)
     print(f"От: @{q} запрос {c}")
     if c == '54':
         send_m(662587491, f'@{q}\n{who}\nПервое сердце')
@@ -378,7 +379,7 @@ def reaction(call):
         send_m(662587491, f'@{q}\n{who}\nПятое сердце')
     if good[c]['photo']:
         send_ph(who,'foto/'+good[c]['photo'])
-    ch(who, good[c]['text'], good[c]['klav'], mes)
+    sm(who, good[c]['text'], good[c]['klav'], mes)
     bot.answer_callback_query(call.id)
 
 
